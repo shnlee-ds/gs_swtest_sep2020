@@ -77,3 +77,4 @@ class Claim():
 
 		if self.claim_type not in self.Claim_Types:
 			raise TypeError("One or More (or NA) Claim Type should be chosen from the claim type list with separator '/'. ")
+ 
