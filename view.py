@@ -47,8 +47,8 @@ class Command_Line_Interface:
 
 
 		self.holder_data["Age"] = self.holder_data["Date of Birth"].apply(controller.age_calc)
-	 controller.save_data(self.holder_data, "Policy_Holder_Data")
-	 controller.save_data(self.claim_data, "Claim_Data")
+		controller.save_data(self.holder_data, "Policy_Holder_Data")
+		controller.save_data(self.claim_data, "Claim_Data")
 
 
 	def add_new_claim(self):
@@ -80,8 +80,8 @@ class Command_Line_Interface:
 			self.err_msg("Wrong Input, check error: " + str(e))
 
 		self.holder_data["Age"] = self.holder_data["Date of Birth"].apply(controller.age_calc)
-	 controller.save_data(self.holder_data, "Policy_Holder_Data")
-	 controller.save_data(self.claim_data, "Claim_Data")
+		controller.save_data(self.holder_data, "Policy_Holder_Data")
+		controller.save_data(self.claim_data, "Claim_Data")
 
 
 
@@ -144,7 +144,7 @@ class Command_Line_Interface:
 
 	def view_clm_cnt_by_year(self):
 		try:
-			print controller.clm_cnt_by_year(self.claim_data))
+			print(controller.clm_cnt_by_year(self.claim_data))
 		except Exception as e:
 			self.err_msg("Error: " + str(e))
 
@@ -183,6 +183,4 @@ while True:
     "8": run.view_clm_cnt_by_year,
     "9": run.view_avg_age}
     c_dict[c]()
-        
-
-
+   
