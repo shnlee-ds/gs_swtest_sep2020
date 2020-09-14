@@ -33,7 +33,7 @@ docker run -it shnlee622/gs_sep2020
 
 ## Test cases
 
-![](https://github.com/shnlee-ds/gs_swtest_sep2020/CLI.png)
+![](CLI.png)
 
 - When 'view.py' is running, you can see an interactive interface like the above screenshot. You can add a new policy holder or a claim history by entering '1' or '2', and below are the test cases. Test cases are also stored in 'sample.txt'.
 
