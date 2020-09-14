@@ -18,7 +18,7 @@ docker pull shnlee622/gs_sep2020:latest
 docker run -it shnlee622/gs_sep2020
 ```
 
-- When you enter '0' to exit 'view.py', the docker container will also be closed. The output data are created inside the container, so you please use 'docker cp' command to move the ouput data into your local machine or add '-v' option to mount the local host when running the docker image.
+- When you enter '0' to exit 'view.py', the docker container will also be closed. Since the output data are created inside the container, please use 'docker cp' command to move the ouput data into your local machine or add '-v' option to link the local host when running the docker image.
 
 
 
@@ -33,11 +33,19 @@ docker run -it shnlee622/gs_sep2020
 
 ### Test cases
 
-- view.py가 실행되면 위와 같은 대화형 인터페이스를 만날 수 있다. 1을 누르면 holder를 추가할 수 있는데 아래 success case의 정보들을 순서대로 입력하면 성공적으로 등록된다. 이 test case들은 sample.txt에도 저장되어있다.
-
+- When 'view.py' is running, you can see an interactive interface like the above screenshot. You can add a new policy holder or a claim history by entering '1' or '2', and below are the test cases. Test cases are also stored in 'sample.txt'.
 
 ```
-success samples
+- Successful cases for adding policy holder
+(1) Female, 06/03/1992, 172-01-0201, Y, Pet/Food, M54.2
+(2) Male, 12/08/1996, 101-16-6062, N, Insect, M99.01 
+(3) Male, 03/21/1973, 741-11-2321, Y, Drug, G44.311
+
+- Failure cases for adding policy holder
+(1) Wrong date format: Female, 06-03-1992, 172-01-0201, Y, Pet/Food, M54.2
+(2) Wrong SSN format: Female, 06/03/1992, 172010201, Y, Pet/Food, M54.2
+(3) Out of Allergy category: Female, 06/03/1992, 172-01-0201, Y, Dog, M54.2
+(4) Out of ICD-10 code (Medical condition): Female, 06/03/1992, 172-01-0201, Y, Pet/Food, Covid-19
 ```
 - 아래는 policy holder 등록시에 발생할 수 있는 오류들을 보여주는 failure cases 들이다.
 ```
