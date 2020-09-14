@@ -110,4 +110,3 @@ def clm_cnt_by_year(claim_data):
 		raise ValueError("Claim list is empty.")
 	else:
 		return claim_data.groupby(claim_data['Date of Incidence'].map(lambda x: x.year)).count()["Claim ID"].to_string()
-	
