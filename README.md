@@ -39,31 +39,31 @@ docker run -it shnlee622/gs_sep2020
 
 
 #### Adding policy holders (Gender, Date of Birth, SSN, Is Smoker, Allergies, Medical Condition)
-```
-Successful cases
+<pre><code>
+<b>Successful cases</b>
   (1) Female, 06/03/1992, 172-01-0201, Y, Pet/Food, M54.2
   (2) Male, 12/08/1996, 101-16-6062, N, Insect, M99.01 
   (3) Male, 03/21/1973, 741-11-2321, Y, Drug, G44.311
 
-Failure cases
-  (1) Wrong date format: Female, 06-03-1992, 172-01-0201, Y, Pet/Food, M54.2
-  (2) Wrong SSN format: Female, 06/03/1992, 172010201, Y, Pet/Food, M54.2
-  (3) Out of Allergy category: Female, 06/03/1992, 172-01-0201, Y, Dog, M54.2
-  (4) Out of ICD-10 code (Medical condition): Female, 06/03/1992, 172-01-0201, Y, Pet/Food, Covid-19
-```
+<b>Failure cases</b>
+  (1) Wrong date format: Female, <b>06-03-1992</b>, 172-01-0201, Y, Pet/Food, M54.2
+  (2) Wrong SSN format: Female, 06/03/1992, <b>172010201</b>, Y, Pet/Food, M54.2
+  (3) Out of Allergy category: Female, 06/03/1992, 172-01-0201, Y, <b>Dog</b>, M54.2
+  (4) Out of ICD-10 code (Medical condition): Female, 06/03/1992, 172-01-0201, Y, Pet/Food, <b>Covid-19</b>
+</code></pre>
 
 #### Adding claim history (SSN, Date of Incidence, Claim Type, Billed amount, Covered amount)
-```
-Successful cases
+<pre><code>
+<b>Successful cases</b>
   (1) 172-01-0201, 01/23/2020, Surgeries, 3100.03, 2200.0
   (2) 172-01-0201, 09/03/2020, Hospital stays, 500.17, 300.2
   (3) 101-16-6062, 06/04/2019, Emergency medical care, 3301.2, 200.2
 
-Failure cases
-  (1) Out of Claim Type category: 172-01-0201, 09/03/2020, Accident, 500.17, 300.2
-  (2) Billed or Covered amount format: 172-01-0201, 09/03/2020, Hospital stays, 500.17, one hundred
+<b>Failure cases</b>
+  (1) Out of Claim Type category: 172-01-0201, 09/03/2020, <b>Accident</b>, 500.17, 300.2
+  (2) Billed or Covered amount format: 172-01-0201, 09/03/2020, Hospital stays, 500.17, <b>one hundred</b>
   (3) It returns an error message when there is no policy holders exists in the list. 
-```
+</code></pre>
 
 
 - By Entering '3' you can input a SSN and get the corresponding policy holder's (hash converted) unique ID. It returns error when your input (SSN) is not in the correct format (000-00-0000).
