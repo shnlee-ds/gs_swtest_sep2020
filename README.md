@@ -33,7 +33,7 @@ docker run -it shnlee622/gs_sep2020
 
 ## Test cases
 
-![](CLI.png){:height="24px"}
+![](CLI.png)<height="24px">
 
 - When 'view.py' is running, you can see an interactive interface like the above screenshot. You can add a new policy holder or a claim history by entering '1' or '2', and below are the test cases. Test cases are also stored in 'sample.txt'.
 
