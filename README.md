@@ -31,13 +31,13 @@ docker run -it shnlee622/gs_sep2020
 - SSN was used as an individual identifier. However, SSN has a security issue, so the hash value of SSN was used as the policy holder's ID. SSN is required when adding a new data, but the hash-converted ID is displayed instead of SSN when displaying a data list.
 
 
-#### Test cases
+## Test cases
 
 - When 'view.py' is running, you can see an interactive interface like the above screenshot. You can add a new policy holder or a claim history by entering '1' or '2', and below are the test cases. Test cases are also stored in 'sample.txt'.
 
-```
-- Adding policy holders (Gender, Date of Birth, SSN, Is Smoker, Allergies, Medical Condition)
 
+#### Adding policy holders (Gender, Date of Birth, SSN, Is Smoker, Allergies, Medical Condition)
+```
 Successful cases
   (1) Female, 06/03/1992, 172-01-0201, Y, Pet/Food, M54.2
   (2) Male, 12/08/1996, 101-16-6062, N, Insect, M99.01 
@@ -48,10 +48,10 @@ Failure cases
   (2) Wrong SSN format: Female, 06/03/1992, 172010201, Y, Pet/Food, M54.2
   (3) Out of Allergy category: Female, 06/03/1992, 172-01-0201, Y, Dog, M54.2
   (4) Out of ICD-10 code (Medical condition): Female, 06/03/1992, 172-01-0201, Y, Pet/Food, Covid-19
+```
 
-
-- Adding claim history (SSN, Date of Incidence, Claim Type, Billed amount, Covered amount)
-
+#### Adding claim history (SSN, Date of Incidence, Claim Type, Billed amount, Covered amount)
+```
 Successful cases
   (1) 172-01-0201, 01/23/2020, Surgeries, 3100.03, 2200.0
   (2) 172-01-0201, 09/03/2020, Hospital stays, 500.17, 300.2
