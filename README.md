@@ -31,7 +31,7 @@ docker run -it shnlee622/gs_sep2020
 - SSN was used as an individual identifier. However, SSN has a security issue, so the hash value of SSN was used as the policy holder's ID. SSN is required when adding a new data, but the hash-converted ID is displayed instead of SSN when displaying a data list.
 
 
-### Test cases
+#### Test cases
 
 - When 'view.py' is running, you can see an interactive interface like the above screenshot. You can add a new policy holder or a claim history by entering '1' or '2', and below are the test cases. Test cases are also stored in 'sample.txt'.
 
